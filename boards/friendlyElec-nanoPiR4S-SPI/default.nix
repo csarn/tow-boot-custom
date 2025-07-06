@@ -9,13 +9,14 @@
 
   hardware = {
     soc = "rockchip-rk3399";
-    SPISize = 2 * 1024 * 1024;
+    SPISize = 4 * 1024 * 1024;
   };
 
   Tow-Boot = {
     defconfig = "nanopi-r4s-rk3399_defconfig";
     patches = [
       ./enable-spi.patch
+      ./add-sst26vf032b.patch
     ];
   };
 }
